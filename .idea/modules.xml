@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/webpack-test.iml" filepath="$PROJECT_DIR$/.idea/webpack-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/house_rp.iml" filepath="$PROJECT_DIR$/.idea/house_rp.iml" />
     </modules>
   </component>
 </project>
