@@ -12,12 +12,17 @@
   "license": "ISC",
   "dependencies": {
     "babel-loader": "^8.2.5",
+    "copy-webpack-plugin": "^11.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
+    "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "redux-devtools-extension": "^2.13.9",
+    "reset-css": "^5.0.1",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.1",
     "style-loader": "^3.3.1",
@@ -28,6 +33,8 @@
     "@babel/preset-env": "^7.18.10",
     "@babel/preset-react": "^7.18.6",
     "node-sass": "^7.0.1",
+    "react-redux": "^8.0.2",
+    "redux": "^4.2.0",
     "webpack-dev-server": "^4.9.2"
   }
 }

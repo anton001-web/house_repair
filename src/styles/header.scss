@@ -1,0 +1,102 @@
+.header-body {
+  display: flex;
+  padding: $padding-default;
+  justify-content: space-between;
+}
+
+.header-list__block {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  transition: left .4s;
+
+  &.burger-active {
+    left: 0;
+  }
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+}
+
+.header-link {
+  @include fontz('Montserrat', 500, 16px, normal);
+  color: #000;
+  text-decoration: none;
+}
+
+.header-list__item {
+  list-style-type: none;
+
+
+  &[data-g] {
+    margin-right: 25px;
+  }
+}
+
+.header-phone__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-phone {
+  @include fontz('Montserrat', 400, 18px, normal);
+  display: flex;
+  align-items: center;
+
+  .header-phone__city {
+    margin-right: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px dashed $red;
+    padding-bottom: 5px;
+  }
+
+  .header-phone__number {
+    color: $red;
+    font-size: 17px;
+  }
+}
+
+.hidden-burger__toggle {
+  padding-bottom: 25px;
+  display: none;
+  align-self: end;
+  font-size: 80px;
+  color: #fff;
+}
+
+.burger-toggle__block {
+  padding-top: 10px;
+  display: none;
+  align-items: start;
+  justify-content: end;
+}
+
+.burger-toggle {
+  margin-right: 30px;
+  display: none;
+  flex-direction: column;
+  align-items: end;
+  transition: all .4s;
+
+  &.burger-open__active {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .line {
+    margin-bottom: 10px;
+    display: block;
+    height: 4px;
+    width: 45px;
+    background-color: $red;
+    border-radius: 5px;
+
+    &:nth-child(3) {
+      width: 37px;
+    }
+  }
+}

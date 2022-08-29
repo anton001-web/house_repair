@@ -1,0 +1,1 @@
+export const BURGER_TOGGLE = 'BURGER_TOGGLE'

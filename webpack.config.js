@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlPlugin = require('html-webpack-plugin')
 const MiniCssExtract = require('mini-css-extract-plugin')
+const copyPlugin = require('copy-webpack-plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
@@ -58,7 +59,8 @@ module.exports = {
         ]
     },
     devServer: {
-        port: 8080
+        port: 8080,
+        historyApiFallback: true,
     },
     plugins: [
         new HtmlPlugin({
@@ -66,6 +68,14 @@ module.exports = {
         }),
         new MiniCssExtract({
             filename: `./styles/${filename('css')}`
+        }),
+        new copyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, './src/assets/images'),
+                    to: path.resolve(__dirname, './dist/assets/images')
+                }
+            ]
         })
     ]
 }

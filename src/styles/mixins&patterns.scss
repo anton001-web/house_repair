@@ -1,0 +1,28 @@
+@mixin fontz($ff, $fw, $fs, $fst) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fs;
+  font-style: $fst;
+}
+
+%section-title {
+  @include fontz('Montserrat', 400, 40px, normal);
+}
+
+%text-transp {
+  @include fontz('Montserrat', 400, 18px, normal);
+  color: $grey;
+}
+
+%btn-filled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: $red;
+  @include fontz('Montserrat', 400, 16px, normal);
+  border: none;
+  outline: none;
+  color: #fff;
+}
+
