@@ -18,6 +18,7 @@
 .header-list {
   display: flex;
   align-items: center;
+
 }
 
 .header-link {
@@ -76,7 +77,7 @@
 }
 
 .burger-toggle {
-  margin-right: 30px;
+  margin-right: 40px;
   display: none;
   flex-direction: column;
   align-items: end;
@@ -98,5 +99,68 @@
     &:nth-child(3) {
       width: 37px;
     }
+  }
+}
+
+.dropdown-toggle {
+  @include fontz('Montserrat', 500, 14px, normal);
+  color: #fff;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.dropdown-wrap {
+  width: fit-content;
+  display: none;
+  flex-direction: column;
+  align-items: end;
+  margin-bottom: 25px;
+
+  &.dropdown-active {
+    .dropdown-menu {
+      visibility: visible;
+      height: auto;
+      opacity: 1;
+      width: auto;
+    }
+
+    .dropdown-toggle {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.dropdown-menu {
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  transition: all .4s;
+}
+
+.dropdown-link {
+  width: 200px;
+  text-align: end;
+  font-weight: 400 !important;
+  border-bottom: 1px solid #fff;
+  padding: 20px 0px;
+}
+
+.dropdown-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  img {
+    display: none;
+    position: absolute;
+    right: -15px;
+    font-size: 20px;
   }
 }

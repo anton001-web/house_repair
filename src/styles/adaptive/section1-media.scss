@@ -2,6 +2,14 @@
   .first-section__main-content {
     margin-top: 70px;
   }
+
+  .first-section__header {
+    display: none;
+  }
+
+  .first-section__hidden-block {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 520px) {

@@ -55,6 +55,13 @@ module.exports = {
                         loader: 'sass-loader'
                     }
                 ]
+            },
+            {
+                test: /\.css$/,
+                use : [
+                    MiniCssExtract.loader,
+                    { loader: "css-loader" }
+                ]
             }
         ]
     },

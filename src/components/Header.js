@@ -2,11 +2,26 @@ import React, {useEffect} from 'react'
 import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {toggleBurger} from "../store/actions";
+import useMatchMedia from "use-match-media";
+import {useMedia} from "use-media";
+
+const services = [
+    {title: 'Наплавляемая кровля'},
+    {title: 'Фасадные работы'},
+    {title: 'Капитальные репорт подьездов'},
+    {title: 'Капитальный ремонт ГВС, ХВС, канализации'},
+    {title: 'Благоустройство'},
+    {title: 'Услуги промышленных альпинистов'},
+    {title: 'Капитальный ремонт электрики'},
+]
 
 const Header = () => {
+    const tablet = useMedia({maxWidth: '620px'})
     const dispatch = useDispatch()
     const burgerMenu = React.createRef()
     const burgerOpen = React.createRef()
+    const dropdown = React.createRef()
+
 
     const handleBurger = () => {
         dispatch(toggleBurger())
@@ -29,6 +44,14 @@ const Header = () => {
         }
     }, [visibility])
 
+    const handleDropDown = () => {
+        if(!tablet) {
+            return null
+        } else {
+            dropdown.current.classList.toggle('dropdown-active')
+        }
+    }
+
     return (
         <header className='header'>
             <div className='container'>
@@ -47,7 +70,17 @@ const Header = () => {
                                 <img src="./assets/images/close.png" alt=""/>
                             </div>
                             <li className="header-list__item" data-g><Link to='' className='header-link'>Главная</Link></li>
-                            <li className="header-list__item" data-g><Link to='' className='header-link'>Услуги</Link></li>
+                            <li className="header-list__item" data-g data-hidden><Link to='' className='header-link'>Услуги</Link></li>
+                            <div className='dropdown-wrap'ref={dropdown}>
+                                <span className='dropdown-toggle' onClick={handleDropDown}>Услуги <img src="./assets/images/down-arrow.png" alt=""/></span>
+                                <div className='dropdown-menu' >
+                                    {
+                                        services.map((service, ind) => (
+                                            <Link key={ind} to='/' className='header-link dropdown-link'>{service.title}</Link>
+                                        ))
+                                    }
+                                </div>
+                            </div>
                             <li className="header-list__item" data-g><Link to='' className='header-link'>О компании</Link></li>
                             <li className="header-list__item"><Link to='' className='header-link'>Контакты</Link></li>
                         </ul>
