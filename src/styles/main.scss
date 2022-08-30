@@ -5,6 +5,7 @@
 
 @import './header.scss';
 @import './section1.scss';
+@import './section2.scss';
 
 .container {
   max-width: 1440px;
@@ -17,6 +18,10 @@
 
 .btn-filled {
   @extend %btn-filled;
+}
+
+.sec-top {
+  margin-top: $section-m;
 }
 
 html.scroll-active{
@@ -51,6 +56,7 @@ body {
 
 @import './adaptive/header-media.scss';
 @import './adaptive/section1-media.scss';
+@import './adaptive/section2-media.scss';
 
 @media screen and (max-width: 767px) {
   .title {
