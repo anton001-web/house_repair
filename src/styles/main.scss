@@ -6,6 +6,7 @@
 @import './header.scss';
 @import './section1.scss';
 @import './section2.scss';
+@import './section3.scss';
 
 .container {
   max-width: 1440px;
@@ -57,6 +58,7 @@ body {
 @import './adaptive/header-media.scss';
 @import './adaptive/section1-media.scss';
 @import './adaptive/section2-media.scss';
+@import './adaptive/section3-media.scss';
 
 @media screen and (max-width: 767px) {
   .title {

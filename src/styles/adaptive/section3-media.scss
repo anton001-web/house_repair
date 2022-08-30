@@ -1,0 +1,26 @@
+@media screen and (max-width: 1200px) {
+  .service-section__info-block {
+    padding: 50px
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .service-section__info-block {
+    grid-row: 3/4;
+    grid-column: 2/4;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .service-text {
+    font-size: 14px !important;
+  }
+}
+
