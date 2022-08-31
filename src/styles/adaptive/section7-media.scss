@@ -1,0 +1,12 @@
+@media screen and (max-width: 767px) {
+  .themselves-info__title {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .themselves-info__title {
+    font-size: 30px;
+    max-width: 1000px;
+  }
+}

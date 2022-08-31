@@ -1,0 +1,31 @@
+.themselves-info__sec {
+  margin-top: $section-m;
+  background-image: url("../assets/images/sec7-bg.png");
+  background-size: cover;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.themselves-info__body {
+  padding: $padding-default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.themselves-info__title {
+  @include fontz('Montserrat', 700, 50px, normal);
+  color: #fff;
+  max-width: 600px;
+  text-align: center;
+
+  a {
+    text-decoration: underline;
+    color: #fff;
+    padding-bottom: 15px;
+    border-spacing: 2px;
+  }
+}
