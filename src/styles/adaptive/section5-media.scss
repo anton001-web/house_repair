@@ -1,0 +1,9 @@
+@media screen and (max-width: 767px) {
+  .static-info__section-block {
+    grid-template-columns: 1fr;
+  }
+
+  .static-info__btn {
+    align-self: center;
+  }
+}

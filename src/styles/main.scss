@@ -8,6 +8,7 @@
 @import './section2.scss';
 @import './section3.scss';
 @import './section4.scss';
+@import './section5.scss';
 
 .container {
   max-width: 1440px;
@@ -61,6 +62,7 @@ body {
 @import './adaptive/section2-media.scss';
 @import './adaptive/section3-media.scss';
 @import './adaptive/section4-media.scss';
+@import './adaptive/section5-media.scss';
 
 @media screen and (max-width: 767px) {
   .title {
