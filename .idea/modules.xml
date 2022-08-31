@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../Lider-85a292dd6fd1abd399144226cfb365c6d3e874a7/.idea/Lider-85a292dd6fd1abd399144226cfb365c6d3e874a7.iml" filepath="$PROJECT_DIR$/../../Lider-85a292dd6fd1abd399144226cfb365c6d3e874a7/.idea/Lider-85a292dd6fd1abd399144226cfb365c6d3e874a7.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/house_rp.iml" filepath="$PROJECT_DIR$/.idea/house_rp.iml" />
     </modules>
   </component>

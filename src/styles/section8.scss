@@ -1,0 +1,59 @@
+.docs-sec {
+  margin-top: $section-m;
+}
+
+.docs-body {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 30px;
+  padding: $padding-default;
+  min-height: 480px;
+}
+
+.docs-info__block {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.house {
+
+}
+
+.house-svg {
+  top: 50%;
+  right: 0%;
+  width: 100%;
+  position: absolute;
+  transform: translate(-0%, -50%);
+}
+
+.docs-info__img-text {
+  //top: 50%;
+  //left: 50%;
+  //position: absolute;
+  //transform: translate(-50%, -50%);
+  margin: 50px 200px 0px 0px;
+  max-width: 550px;
+  @include fontz('Montserrat', 400, 30px, normal);
+  z-index: 100;
+}
+
+.docs-second-info__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.docs-second-info__text {
+  @extend %text-transp;
+}
+
+.docs-second-info__btn {
+  margin-top: 20px;
+  @extend %btn-filled;
+  text-transform: uppercase;
+  align-self: start;
+}

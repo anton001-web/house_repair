@@ -1,0 +1,48 @@
+@media screen and (max-width: 996px) {
+  .docs-info__img-text {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .docs-body {
+    grid-template-columns: 1fr;
+  }
+
+  .docs-second-info__block {
+    margin-top: 170px;
+  }
+
+  .docs-second-info__block {
+    text-align: end;
+  }
+
+  .docs-second-info__btn {
+    align-self: end;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .docs-body {
+    grid-template-columns: 1fr;
+  }
+
+  .docs-info__img-text {
+    margin: 30px 200px 0px 0px;
+    width: 90%;
+    position: absolute;
+    left: 0;
+  }
+
+  .docs-info__img-text {
+    font-size: 16px;
+  }
+
+  .house-svg {
+    width: 90%;
+  }
+
+  .docs-second-info__text {
+    font-size: 15px !important;
+  }
+}
