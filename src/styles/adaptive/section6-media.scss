@@ -1,0 +1,21 @@
+@media screen and (max-width: 767px) {
+  .benefits-list {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-title {
+    font-size: 28px;
+  }
+
+  .benefit-title {
+    font-size: 20px;
+  }
+
+  .benefit-text {
+    font-size: 16px !important;
+  }
+
+  .benefit-link {
+    font-size: 16px;
+  }
+}

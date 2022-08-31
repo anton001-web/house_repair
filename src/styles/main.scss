@@ -9,6 +9,7 @@
 @import './section3.scss';
 @import './section4.scss';
 @import './section5.scss';
+@import './section6.scss';
 
 .container {
   max-width: 1440px;
@@ -44,6 +45,18 @@ html.scroll-active {
   }
 }
 
+//html {
+  //width: 100%;
+  //max-width: 100%;
+  //overflow-x: hidden;
+//}
+
+body {
+  //width: 100%;
+  //max-width: 100%;
+  overflow-x: hidden;
+}
+
 html.scroll-active {
   body {
     position: fixed;
@@ -53,16 +66,13 @@ html.scroll-active {
   }
 }
 
-body {
-  overflow-x: hidden;
-}
-
 @import './adaptive/header-media.scss';
 @import './adaptive/section1-media.scss';
 @import './adaptive/section2-media.scss';
 @import './adaptive/section3-media.scss';
 @import './adaptive/section4-media.scss';
 @import './adaptive/section5-media.scss';
+@import './adaptive/section6-media.scss';
 
 @media screen and (max-width: 767px) {
   .title {

@@ -54,12 +54,12 @@
 
 .service-item__title-block {
   padding: 10px;
+}
 
-  .service-item__title {
-    display: block;
-    @include fontz('Montserrat', 400, 20px, normal);
-    max-width: 340px;
-  }
+.service-item__title {
+  display: block;
+  @include fontz('Montserrat', 400, 20px, normal);
+  max-width: 340px;
 }
 
 .service-section__info-block {

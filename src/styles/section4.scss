@@ -24,11 +24,12 @@
 }
 
 .company-info__block {
+  padding-left: 80px;
+  text-align: start;
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
-  text-align: start;
 }
 
 .company-info__title-hidden {
