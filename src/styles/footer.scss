@@ -1,0 +1,101 @@
+.footer {
+  background: $white-shd;
+  margin-top: $section-m;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.footer-body {
+  padding: $padding-default;
+}
+
+.footer-top__first-left__text {
+  @include fontz('Montserrat', 900, 25px, bold);
+
+  span {
+    color: $red;
+  }
+
+  max-width: 300px;
+}
+
+.footer-top__second-left__text {
+  margin-top: 20px;
+  max-width: 300px;
+  @extend %text-transp;
+  text-transform: uppercase;
+}
+
+.footer-list__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-list {
+  display: flex;
+}
+
+.footer-list__item {
+  @include fontz('Montserrat', 400, 18px, normal);
+  &[data-m] {
+
+    margin-right: 20px;
+  }
+}
+
+.footer-media__list {
+  display: flex;
+
+  .footer-media__item {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+
+    &[data-mr] {
+      margin-right: 10px;
+    }
+  }
+}
+
+.footer-timetable {
+  display: flex;
+  align-items: start;
+  justify-content: end;
+}
+
+.footer-timetable__body {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+
+  .timetable, .timetable-down {
+    font-size: 14px;
+  }
+}
+
+.timetable {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  @include fontz('Montserrat', 500, 18px, normal);
+}
+
+.timetable-down {
+  @include fontz('Montserrat', 500, 18px, normal);
+}
+
+.footer-media__list-block {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}

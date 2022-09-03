@@ -91,7 +91,7 @@ input[type='file'] {
 .req-call__form-note {
   max-width: 700px;
   text-align: center;
-  margin-top: 10px;
+  margin: 10px 0px;
   @include fontz('Montserrat', 400, 20px, normal);
 
   .rc__form-alert {
