@@ -1,0 +1,91 @@
+.custom-form__item {
+  position: relative;
+}
+
+.custom-form__input {
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid $red;
+  margin-bottom: 20px;
+  @include fontz('Montserrat', 400, 20px, normal);
+  outline: none;
+}
+
+.custom-form__label {
+  transition: all .4s;
+  position: absolute;
+  left: 15px;
+  top: calc(50% - 5px);
+  transform: translate(0%, -50%);
+  @extend %text-transp;
+}
+
+.custom-form__input:focus+label,
+.custom-form__input:not(:placeholder-shown)+label {
+  top: 0px;
+}
+
+.custom-form__inputs-group {
+  display: flex;
+  column-gap: 20px;
+  justify-content: space-between;
+}
+
+.custom-form__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-form__note {
+  max-width: 700px;
+  text-align: center;
+  margin: 10px 0px;
+  @include fontz('Montserrat', 400, 20px, normal);
+
+  .custom-form__alert {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  a {
+    color: $red;
+    margin-left: 5px;
+  }
+}
+
+.custom-input-file {
+  border: 1px dotted #000;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 15px 15px;
+  @include fontz('Montserrat', 400, 22px, normal);
+}
+
+input[type=file] {
+  display: none;
+}
+
+.custom-form__errors {
+  @extend %text-transp;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.custom-form__submit {
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 20px;
+  @extend %btn-filled;
+  width: 100%;
+  max-width: 270px;
+  border-radius: 5px;
+}
