@@ -1,0 +1,139 @@
+//input[type="text" i] {
+//  padding: 0px 0px;
+//}
+
+@import "~@syncfusion/ej2-react-calendars/styles/bootstrap4.css";
+
+.form-section {
+  margin-top: $section-m;
+}
+
+.form-section__body {
+  padding: $padding-default;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-section__title {
+  text-align: center;
+  @extend %section-title;
+  font-weight: 500 !important;
+}
+
+.form-block {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 40px;
+}
+
+.req-call__form {
+
+}
+
+.req-call__form-item {
+  position: relative;
+}
+
+.req-call__form-input {
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid $red;
+  margin-bottom: 20px;
+  @include fontz('Montserrat', 400, 20px, normal);
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.req-call__form-label {
+  transition: all .4s;
+  position: absolute;
+  left: 15px;
+  top: calc(50% - 5px);
+  transform: translate(0%, -50%);
+  @extend %text-transp;
+}
+
+
+.req-call__form-input:focus+label,
+.req-call__form-input:not(:placeholder-shown)+label {
+  top: 0px;
+}
+
+.req-call_inputs-group {
+  display: flex;
+  column-gap: 20px;
+  justify-content: space-between;
+}
+
+input[type='file'] {
+  color: transparent;
+}
+
+.file__inp {
+
+}
+
+.req-call__form-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.req-call__form-note {
+  max-width: 700px;
+  text-align: center;
+  margin-top: 10px;
+  @include fontz('Montserrat', 400, 20px, normal);
+
+  .rc__form-alert {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  a {
+    color: $red;
+    margin-left: 5px;
+  }
+}
+
+.req-call_form-submit {
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 20px;
+  @extend %btn-filled;
+  width: 100%;
+  max-width: 270px;
+  border-radius: 5px;
+}
+
+input[type=file] {
+  display: none;
+}
+
+.custom-input-file {
+  border: 1px dotted #000;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 15px 15px;
+  @include fontz('Montserrat', 400, 22px, normal);
+}
+
+.req-call__form-errors {
+  @extend %text-transp;
+  font-size: 14px;
+  margin-top: 20px;
+}

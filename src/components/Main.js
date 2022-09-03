@@ -7,6 +7,7 @@ import Section5 from "./Section5";
 import Section6 from "./Section6";
 import Section7 from "./Section7";
 import Section8 from "./Section8";
+import Section9 from "./Section9";
 
 const Main = () => {
     return (
@@ -19,6 +20,7 @@ const Main = () => {
             <Section6 />
             <Section7 />
             <Section8 />
+            <Section9 />
         </>
     )
 }

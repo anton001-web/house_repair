@@ -12,6 +12,7 @@
 @import './section6.scss';
 @import './section7.scss';
 @import './section8.scss';
+@import './section9.scss';
 
 .container {
   max-width: 1440px;
@@ -77,6 +78,7 @@ html.scroll-active {
 @import './adaptive/section6-media.scss';
 @import './adaptive/section7-media.scss';
 @import './adaptive/section8-media.scss';
+@import './adaptive/section9-media.scss';
 
 @media screen and (max-width: 767px) {
   .title {
