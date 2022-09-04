@@ -56,6 +56,11 @@
   padding: 10px;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 .service-item__title {
   display: block;
   @include fontz('Montserrat', 400, 20px, normal);

@@ -15,13 +15,15 @@ const Section3 = () => {
                         <div className='service-list'>
                             {
                                 companyServiceData.map((service, ind) => (
-                                    <div key={ind} className='service-item'>
-                                        <img src={service.img} alt=""/>
-                                        <div className='service-item__title-block'>
-                                            <span className='service-item__title'>{service.title}</span>
+                                    <Link to={service.to} key={ind}>
+                                        <div className='service-item'>
+                                            <img src={service.img} alt=""/>
+                                            <div className='service-item__title-block'>
+                                                <span className='service-item__title'>{service.title}</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    ))
+                                    </Link>
+                                ))
                             }
                             <div className='service-section__info-block'>
                                 <div className='service-section-info__group'>

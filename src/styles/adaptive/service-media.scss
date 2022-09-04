@@ -1,0 +1,42 @@
+@media screen and (max-width: 767px) {
+  .service-cur__advantages-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .service-cur__advantages-title {
+    font-size: 22px;
+  }
+
+  .service-cur__title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .advantages-title__img {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px !important;
+  }
+
+  .service-cur__photoalbum-title {
+    font-size: 26px;
+  }
+
+  .service-cur__photoalbum-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .service-cur__advantages-list {
+    grid-template-columns: 1fr;
+  }
+
+  .service-cur__photoalbum-swiper {
+    display: block;
+  }
+
+  .service-cur__photoalbum-list {
+    display: none;
+  }
+}

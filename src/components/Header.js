@@ -70,7 +70,7 @@ const Header = () => {
                                 <img src="./assets/images/close.png" alt=""/>
                             </div>
                             <li className="header-list__item" data-g><Link to='' className='header-link'>Главная</Link></li>
-                            <li className="header-list__item" data-g data-hidden><Link to='' className='header-link'>Услуги</Link></li>
+                            <li className="header-list__item" data-g data-hidden><Link to='/services' className='header-link'>Услуги</Link></li>
                             <div className='dropdown-wrap'ref={dropdown}>
                                 <span className='dropdown-toggle' onClick={handleDropDown}>Услуги <img src="./assets/images/down-arrow.png" alt=""/></span>
                                 <div className='dropdown-menu' >

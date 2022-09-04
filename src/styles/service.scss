@@ -1,0 +1,135 @@
+.service-cur__body {
+  padding: $padding-default;
+}
+
+.service-cur__title {
+  @include fontz('Montserrat', 900, 46px, normal);
+
+  span {
+    color: $red;
+  }
+}
+
+.service-cur__advantages-list__block {
+  margin-top: 100px;
+}
+
+.service-cur__advantages-list__title-group {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  img {
+    margin-right: 35px;
+  }
+}
+
+.service-cur__advantages-title {
+  max-width: 745px;
+  @include fontz('Montserrat', 700, 40px, normal);
+
+  span {
+    color: $red;
+  }
+}
+
+.service-cur__advantages-list {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-cur__advantages-list__item {
+  min-height: 220px;
+  //display: grid;
+  //grid-template-rows: 1fr 1fr;
+  padding: 15px;
+  border: 1px solid #A6A6A6;
+  border-radius: 10px;
+
+  img {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 8px;
+  }
+}
+
+.service-cur__advantages-list__item-title {
+  max-width: 300px;
+  @include fontz('Montserrat', 700, 18px, normal);
+  margin-bottom: 8px;
+  min-height: 40px;
+}
+
+.service-cur__advantages-list__item-text {
+  @extend %text-transp;
+  max-width: 370px;
+  font-size: 14px !important;
+  margin-bottom: 8px;
+}
+
+.service-cur__photoalbum-list__block {
+  margin-top: 150px;
+}
+
+.service-cur__photoalbum-title {
+  @include fontz('Montserrat', 400, 40px, normal);
+
+  span {
+    color: $red;
+  }
+}
+
+.service-cur__photoalbum-list {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-cur__photoalbum-list__item {
+  img {
+    width: 100%;
+    object-fit: cover;
+
+  }
+}
+
+.service-cur__form-block {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-cur__form {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 40px;
+}
+
+.service-cur__form-title {
+  @include fontz('Montserrat', 400, 40px, normal);
+  text-align: center;
+}
+
+.service-cur__photoalbum-swiper {
+  margin-top: 50px;
+  display: none;
+}
+
+.swiper-scrollbar {
+  height: 15px;
+  margin: 0;
+  opacity: 1 !important;
+  background: #D9D9D9;
+  border-radius: 100px;
+}
+
+.swiper-scrollbar-drag {
+  height: 100%;
+  background: #A6A6A6;
+  border-radius: 100px;
+}
