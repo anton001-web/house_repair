@@ -10,16 +10,21 @@ import {
 } from "react-router-dom";
 import Service from "./components/pages/Service";
 import Section3 from "./components/Section3";
+import Contacts from "./components/pages/Contacts";
 
 const App = () => {
     return (
         <Router>
-            <Header />
+            <div className='wrap'>
+                <Header />
                 <Routes>
                     <Route path='/services/:serviceCategory' exact element={<Service />} />
                     <Route path='/' exact element={<Main />} />
+                    <Route path='/contacts' exact element={<Contacts />} />
+                    <Route path='/services' exact element={<Section3 />} />
                 </Routes>
-            <Footer />
+                <Footer />
+            </div>
         </Router>
     )
 }

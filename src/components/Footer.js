@@ -1,6 +1,11 @@
 import React from 'react'
+import {Link} from "react-router-dom";
 
 const Footer = () => {
+    const scrollTop = () => {
+        window.scrollTo(0, 0)
+    }
+
     return (
         <footer className='footer'>
             <div className="container">
@@ -12,10 +17,10 @@ const Footer = () => {
                         </div>
                         <div className='footer-list__block'>
                             <ul className='footer-list'>
-                                <li className="footer-list__item" data-m>Главная</li>
-                                <li className="footer-list__item" data-m>Услуги</li>
-                                <li className="footer-list__item" data-m>О компании</li>
-                                <li className="footer-list__item">Контакты</li>
+                                <li className="footer-list__item" data-m><Link onClick={scrollTop} className='footer-link' to='/'>Главная</Link></li>
+                                <li className="footer-list__item" data-m><Link onClick={scrollTop} className='footer-link' to='/services'>Услуги</Link></li>
+                                <li className="footer-list__item" data-m><Link onClick={scrollTop} className='footer-link' to=''>О компании</Link></li>
+                                <li className="footer-list__item"><Link onClick={scrollTop} className='footer-link' to=''>Контакты</Link></li>
                             </ul>
                         </div>
                         <div className="footer-media__list-block">

@@ -11,7 +11,7 @@ import Section9 from "./Section9";
 
 const Main = () => {
     return (
-        <>
+        <div className='content'>
             <Section1 />
             <Section2 />
             <Section3 />
@@ -21,7 +21,7 @@ const Main = () => {
             <Section7 />
             <Section8 />
             <Section9 />
-        </>
+        </div>
     )
 }
 

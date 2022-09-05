@@ -1,0 +1,45 @@
+@media screen and (max-width: 767px) {
+  .contacts-mail__group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts-phone__block {
+    margin-bottom: 35px;
+  }
+
+  .contacts-lab__item {
+    font-size: 24px;
+  }
+
+  .contacts-section__body-title {
+    font-size: 32px;
+  }
+
+  .contacts-way__lab-item {
+    font-size: 18px;
+  }
+
+  .contacts-label {
+    font-size: 15px;
+  }
+
+  .contacts-mway__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts-map__info-block {
+    margin-top: 20px;
+  }
+
+  .contacts-mapImg__block {
+    img {
+      width: 100%;
+    }
+  }
+
+  .contacts-mway__body {
+    padding: $padding-default;
+  }
+}
