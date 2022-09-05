@@ -6,21 +6,24 @@ import useMatchMedia from "use-match-media";
 import {useMedia} from "use-media";
 
 const services = [
-    {title: 'Наплавляемая кровля', to: '/services/roof'},
-    {title: 'Фасадные работы', to: '/services/facade-works'},
-    {title: 'Капитальные репорт подьездов', to: '/services/entrance-repair'},
-    {title: 'Капитальный ремонт ГВС, ХВС, канализации', to: '/services/overall-overhaul'},
-    {title: 'Благоустройство', to: '/services/improvement'},
-    {title: 'Услуги промышленных альпинистов', to: '/services/climbers-service'},
-    {title: 'Капитальный ремонт электрики', to: '/services/electric-overhaul'},
+    {title: 'Наплавляемая кровля', to: '/services/roof', img: './assets/images/headerDescDD1.png'},
+    {title: 'Фасадные работы', to: '/services/facade-works', img: './assets/images/headerDescDD2.png'},
+    {title: 'Капитальные репорт подьездов', to: '/services/entrance-repair', img: './assets/images/headerDescDD3.png'},
+    {title: 'Капитальный ремонт ГВС, ХВС, канализации', to: '/services/overall-overhaul', img: './assets/images/headerDescDD5.png'},
+    {title: 'Благоустройство', to: '/services/improvement', img: './assets/images/headerDescDD6.png'},
+    {title: 'Услуги промышленных альпинистов', to: '/services/climbers-service', img: './assets/images/headerDescDD7.png'},
+    {title: 'Капитальный ремонт электрики', to: '/services/electric-overhaul', img: './assets/images/headerDescDD4.png'},
 ]
 
 const Header = () => {
     const tablet = useMedia({maxWidth: '620px'})
+    const tabletS = useMedia({maxWidth: '767px'})
     const dispatch = useDispatch()
     const burgerMenu = React.createRef()
     const burgerOpen = React.createRef()
     const dropdown = React.createRef()
+    const serviceRef = React.createRef()
+    const desktopDD = React.createRef()
 
 
     const handleBurger = () => {
@@ -52,6 +55,16 @@ const Header = () => {
         }
     }
 
+    const deskDD = () => {
+        if(!tabletS) {
+            desktopDD.current.classList.remove('desktop-left-active')
+            desktopDD.current.classList.toggle('desktop-right-active')
+        } else {
+            desktopDD.current.classList.remove('desktop-right-active')
+            desktopDD.current.classList.toggle('desktop-left-active')
+        }
+    }
+
     const disableAnimations = () => {
         dispatch(toggleBurger())
         scrollTop()
@@ -79,7 +92,23 @@ const Header = () => {
                                 <img src="./assets/images/close.png" alt=""/>
                             </div>
                             <li className="header-list__item" data-g><Link onClick={scrollTop} to='' className='header-link'>Главная</Link></li>
-                            <li className="header-list__item" data-g data-hidden><Link onClick={scrollTop} to='/services' className='header-link'>Услуги</Link></li>
+                            <li className="header-list__item service-header-link" ref={serviceRef} data-g data-hidden><Link onClick={deskDD} to='' className='header-link'>Услуги</Link>
+
+                            </li>
+                            <div className='desk-header_dropdown-wrap' ref={desktopDD}>
+                                <div className='desk-header_dropdown-menu'>
+                                    {
+                                        services.map((item, index) => (
+                                            <Link to={item.to} onClick={deskDD}>
+                                                <div className='desk-dropdown__item' key={index}>
+                                                    <img src={item.img} alt=""/>
+                                                    <span className='desk-dropdown__item-title'>{item.title}</span>
+                                                </div>
+                                            </Link>
+                                        ))
+                                    }
+                                </div>
+                            </div>
                             <div className='dropdown-wrap'ref={dropdown}>
                                 <span className='dropdown-toggle' onClick={handleDropDown}>Услуги <img src="./assets/images/down-arrow.png" alt=""/></span>
                                 <div className='dropdown-menu' >
