@@ -1,0 +1,53 @@
+.about-page__header-block {
+  padding: $padding-default;
+}
+
+.about-page__title {
+  @include fontz('Montserrat', 400, 40px, normal);
+  margin-bottom: 10px;
+}
+
+.about-page__subTitle {
+  @include fontz('Montserrat', 700, 20px, normal);
+  color: $red;
+}
+
+.about-page__info-wrap {
+  background-color: $red;
+}
+
+.about-page__info-block {
+  padding: $padding-default;
+  margin-top: 100px;
+  display: grid;
+  gap: 45px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-page__info-img__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 90%;
+    object-fit: cover;
+  }
+}
+
+.about-page__info-list__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-page__info-list__title {
+  @include fontz('Montserrat', 700, 35px, normal);
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.about-page__info-list__text {
+  @include fontz('Montserrat', 400, 20px, normal);
+  color: #fff;
+}

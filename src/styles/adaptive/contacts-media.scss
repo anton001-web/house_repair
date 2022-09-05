@@ -1,4 +1,11 @@
 @media screen and (max-width: 767px) {
+  .contacts-mway__body {
+    .container {
+      grid-template-columns: 1fr;
+      margin-top: 20px;
+    }
+  }
+
   .contacts-mail__group {
     display: flex;
     flex-direction: column;

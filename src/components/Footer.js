@@ -19,7 +19,7 @@ const Footer = () => {
                             <ul className='footer-list'>
                                 <li className="footer-list__item" data-m><Link onClick={scrollTop} className='footer-link' to='/'>Главная</Link></li>
                                 <li className="footer-list__item" data-m><Link onClick={scrollTop} className='footer-link' to='/services'>Услуги</Link></li>
-                                <li className="footer-list__item" data-m><Link onClick={scrollTop} className='footer-link' to=''>О компании</Link></li>
+                                {/*<li className="footer-list__item" data-m><Link onClick={scrollTop} className='footer-link' to=''>О компании</Link></li>*/}
                                 <li className="footer-list__item"><Link onClick={scrollTop} className='footer-link' to=''>Контакты</Link></li>
                             </ul>
                         </div>

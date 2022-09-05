@@ -7,6 +7,7 @@
 @import './header.scss';
 @import './service.scss';
 @import './contacts.scss';
+@import './about.scss';
 @import './footer.scss';
 @import './section1.scss';
 @import './section2.scss';
@@ -29,6 +30,28 @@
 
 .btn-filled {
   @extend %btn-filled;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
 }
 
 .sec-top {
@@ -75,6 +98,7 @@ html.scroll-active {
 
 @import './adaptive/header-media.scss';
 @import './adaptive/footer-media.scss';
+@import './adaptive/about-media.scss';
 @import './adaptive/contacts-media.scss';
 @import './adaptive/service-media.scss';
 @import './adaptive/section1-media.scss';

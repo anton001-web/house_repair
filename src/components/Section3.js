@@ -3,6 +3,10 @@ import {companyServiceData} from "../data/companyServiceData";
 import {Link} from "react-router-dom";
 
 const Section3 = () => {
+    const scrollTop = () => {
+        window.scrollTo(0, 0)
+    }
+
     return (
         <section className='service-section'>
             <div className='container'>
@@ -15,7 +19,7 @@ const Section3 = () => {
                         <div className='service-list'>
                             {
                                 companyServiceData.map((service, ind) => (
-                                    <Link to={service.to} key={ind}>
+                                    <Link to={service.to} key={ind} onClick={scrollTop}>
                                         <div className='service-item'>
                                             <img src={service.img} alt=""/>
                                             <div className='service-item__title-block'>

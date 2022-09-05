@@ -47,10 +47,13 @@
 }
 
 .contacts-mway__body {
-  padding: 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 100px;
+
+  .container {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 100px;
+  }
 }
 
 .contacts-mapImg__block {

@@ -1,7 +1,10 @@
 import {BURGER_TOGGLE} from "./types";
 
-export const toggleBurger = () => {
+export const toggleBurger = (type) => {
     return {
-        type: BURGER_TOGGLE
+        type: BURGER_TOGGLE,
+        payload: {
+            opType: type
+        }
     }
 }

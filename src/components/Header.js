@@ -26,8 +26,8 @@ const Header = () => {
     const desktopDD = React.createRef()
 
 
-    const handleBurger = () => {
-        dispatch(toggleBurger())
+    const handleBurger = (type) => {
+        dispatch(toggleBurger(type))
     }
 
     const {visibility} = useSelector(state => {
@@ -47,6 +47,19 @@ const Header = () => {
         }
     }, [visibility])
 
+    const scrollTop = () => {
+        window.scrollTo(0, 0)
+    }
+
+    const disableMenu = () => {
+        burgerMenu.current.classList.remove('burger-active')
+        burgerOpen.current.classList.remove('burger-open__active')
+        desktopDD.current.classList.remove('desktop-left-active')
+        desktopDD.current.classList.remove('desktop-right-active')
+        document.documentElement.classList.remove('scroll-active')
+        scrollTop()
+    }
+
     const handleDropDown = () => {
         if(!tablet) {
             return null
@@ -65,20 +78,14 @@ const Header = () => {
         }
     }
 
-    const disableAnimations = () => {
-        dispatch(toggleBurger())
-        scrollTop()
-    }
-
-    const scrollTop = () => {
-        window.scrollTo(0, 0)
-    }
 
     return (
         <header className='header'>
             <div className='container'>
                 <div className="header-body">
-                    <img src="./assets/images/logo.png" className='header-logo'/>
+                    <Link to='/' onClick={disableMenu}>
+                        <img src="./assets/images/logo.png" className='header-logo'/>
+                    </Link>
                     <div className='burger-toggle__block'>
                         <div className='burger-toggle' onClick={handleBurger} ref={burgerOpen}>
                             <span className="line"></span>
@@ -91,8 +98,8 @@ const Header = () => {
                             <div className='hidden-burger__toggle' onClick={handleBurger}>
                                 <img src="./assets/images/close.png" alt=""/>
                             </div>
-                            <li className="header-list__item" data-g><Link onClick={scrollTop} to='' className='header-link'>Главная</Link></li>
-                            <li className="header-list__item service-header-link" ref={serviceRef} data-g data-hidden><Link onClick={deskDD} to='' className='header-link'>Услуги</Link>
+                            <li className="header-list__item" data-g><Link onClick={disableMenu} to='/' className='header-link'>Главная</Link></li>
+                            <li className="header-list__item service-header-link" ref={serviceRef} data-g data-hidden><span onClick={deskDD} className='header-link'>Услуги</span>
 
                             </li>
                             <div className='desk-header_dropdown-wrap' ref={desktopDD}>
@@ -114,13 +121,13 @@ const Header = () => {
                                 <div className='dropdown-menu' >
                                     {
                                         services.map((service, ind) => (
-                                            <Link key={ind} to={service.to} onClick={disableAnimations} className='header-link dropdown-link'>{service.title}</Link>
+                                            <Link key={ind} to={service.to} onClick={disableMenu} className='header-link dropdown-link'>{service.title}</Link>
                                         ))
                                     }
                                 </div>
                             </div>
-                            <li className="header-list__item" data-g><Link onClick={scrollTop} to='' className='header-link'>О компании</Link></li>
-                            <li className="header-list__item"><Link to='/contacts' onClick={scrollTop} className='header-link'>Контакты</Link></li>
+                            <li className="header-list__item" data-g><Link onClick={disableMenu} to='/about' className='header-link'>О компании</Link></li>
+                            <li className="header-list__item"><Link to='/contacts' onClick={disableMenu} className='header-link'>Контакты</Link></li>
                         </ul>
                     </div>
                     <div className='header-phone__block'>

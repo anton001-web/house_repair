@@ -1,0 +1,13 @@
+@media screen and (max-width: 767px) {
+  .about-page__info-block {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page__info-list__title {
+    font-size: 28px;
+  }
+
+  .about-page__info-list__text {
+    font-size: 18px;
+  }
+}

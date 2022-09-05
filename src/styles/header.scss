@@ -25,6 +25,7 @@
   @include fontz('Montserrat', 500, 16px, normal);
   color: #000;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .header-list__item {
@@ -62,6 +63,7 @@
 }
 
 .hidden-burger__toggle {
+  cursor: pointer;
   padding-bottom: 25px;
   display: none;
   align-self: end;
@@ -82,6 +84,7 @@
   flex-direction: column;
   align-items: end;
   transition: all .4s;
+  cursor: pointer;
 
   &.burger-open__active {
     opacity: 0;
